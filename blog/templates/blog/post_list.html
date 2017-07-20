@@ -3,6 +3,8 @@
   <title>Sahana's Blog</title>
   <link href="https://fonts.googleapis.com/css?family=Concert+One|Lato|Limelight"
   rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <style>
   a:link {
     color: #75BAC4;
@@ -30,9 +32,9 @@
   </div>
 {% for post in posts %}
   <div>
-    <h1><a href="">{{ post.title }}</a></h1>
-    <p>published: {{ post.published_date }}</p>
-    <p>{{ post.text|linebreaksbr }}</p>
+    <h1 style = "color: #75BAC4; font-family: 'Concert One', cursive;"><a href="">{{ post.title }}</a></h1>
+    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">published: {{ post.published_date }}</p>
+    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">{{ post.text|linebreaksbr }}</p>
   </div>
 {% endfor %}
 
@@ -46,15 +48,7 @@
       Django tutorial !!! I am now customizing my html because the Django tutorial
       one is ugly ... bye</p>
   </div>
-  <div>
-    <h2 style= "color: #75BAC4; font-family: 'Concert One', cursive;"><a href=
-      "www.aaa">My First Blog Post</a></h2>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">
-      Published 07/19/2017, 9:17 pm</p>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">
-      This is my very first blog post on a template that I coded myself after
-      a very long Django tutorial. Goodbye.</p>
-  </div>
+
 </body>
 
 </html>
