@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <html>
    <head>
   <title>Sahana's Blog</title>
@@ -5,9 +6,9 @@
   rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
   <style>
   a:link {
-    color: #75BAC4;
     background-color: transparent;
     text-decoration: none;
 }
@@ -18,36 +19,30 @@
 
   }
 
-  p {
-      border: 2.5px solid #75BAC4 ;
-      padding: 15px;
-  }
+
   </style>
 </head>
-<body style= "background-color: #37718E">
-  <div>
-  <center><h1 style ="font-size: 270%; color: #75BAC4; font-family: 'Limelight',
+<body style= "background-color: #EEE5E9">
+  <div class = "page-header">
+    <header>
+  <h1 style ="font-size: 270%; font-family: 'Limelight',
      cursive;"><a href="http://www.srustiarchitects.com">
-    Sahana's Blog</a></h1></center>
+    Sahana's Blog</a></h1>
+  </header>
   </div>
-{% for post in posts %}
-  <div>
-    <h1 style = "color: #75BAC4; font-family: 'Concert One', cursive;"><a href="">{{ post.title }}</a></h1>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">published: {{ post.published_date }}</p>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">{{ post.text|linebreaksbr }}</p>
+<div class="content container">
+  <div class="row">
+    <div class="col-md-8">
+      {% for post in posts %}
+        <div class="post">
+          <h2 style = "color: #75BAC4; font-family: 'Concert One', cursive;"><a href="">{{ post.title }}</a></h2>
+          <p style =  "font-family: 'Lato', sans-serif;"><b>published: {{ post.published_date }}</b></p>
+          <p style = "font-family: 'Lato', sans-serif;">{{ post.text|linebreaksbr }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-{% endfor %}
-
-  <div>
-    <h2 style= "color: #75BAC4; font-family: 'Concert One', cursive;"><a href=
-       "www.snakes.com">My Second Blog Post</a></h2>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">
-      Published 07/19/2017, 9:19 pm</p>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">
-      This is my second blog post that I am putting up to follow this very long
-      Django tutorial !!! I am now customizing my html because the Django tutorial
-      one is ugly ... bye</p>
-  </div>
+</div>
 
 </body>
 
