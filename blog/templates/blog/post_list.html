@@ -1,7 +1,8 @@
 <html>
    <head>
   <title>Sahana's Blog</title>
-  <link href="https://fonts.googleapis.com/css?family=Concert+One|Lato|Limelight" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One|Lato|Limelight"
+  rel="stylesheet">
   <style>
   a:link {
     color: #75BAC4;
@@ -23,8 +24,27 @@
 </head>
 <body style= "background-color: #37718E">
   <div>
-  <center><h1 style ="font-size: 270%; color: #75BAC4; font-family: 'Limelight', cursive;"><a href="http://www.srustiarchitects.com">
+  <center><h1 style ="font-size: 270%; color: #75BAC4; font-family: 'Limelight',
+     cursive;"><a href="http://www.srustiarchitects.com">
     Sahana's Blog</a></h1></center>
+  </div>
+{% for post in posts %}
+  <div>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>published: {{ post.published_date }}</p>
+    <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
+
+  <div>
+    <h2 style= "color: #75BAC4; font-family: 'Concert One', cursive;"><a href=
+       "www.snakes.com">My Second Blog Post</a></h2>
+    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">
+      Published 07/19/2017, 9:19 pm</p>
+    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">
+      This is my second blog post that I am putting up to follow this very long
+      Django tutorial !!! I am now customizing my html because the Django tutorial
+      one is ugly ... bye</p>
   </div>
   <div>
     <h2 style= "color: #75BAC4; font-family: 'Concert One', cursive;"><a href=
@@ -35,14 +55,6 @@
       This is my very first blog post on a template that I coded myself after
       a very long Django tutorial. Goodbye.</p>
   </div>
-  <div>
-    <h2 style= "color: #75BAC4; font-family: 'Concert One', cursive;"><a href= "www.snakes.com">My Second Blog Post</a></h2>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">Published 07/19/2017, 9:19 pm</p>
-    <p style = "background-color: #75BAC4; font-family: 'Lato', sans-serif;">This is my second blog post that I am putting up to follow this very long
-      Django tutorial !!! I am now customizing my html because the Django tutorial
-      one is ugly ... bye</p>
-  </div>
-
 </body>
 
 </html>
