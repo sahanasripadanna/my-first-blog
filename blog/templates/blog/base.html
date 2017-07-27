@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<html>
+   <head>
+  <title>Sahana's Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=Concert+One|Lato|Limelight"
+  rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <style>
+  a:link {
+    background-color: transparent;
+    text-decoration: none;
+}
+  a:hover {
+    color: #C33C54;
+    background-color: transparent;
+    text-decoration: none;
+
+  }
+
+  </style>
+</head>
+<body style= "background-color: #EEE5E9">
+  <div class = "page-header">
+    <header>
+  <h1 style ="font-size: 270%; font-family: 'Limelight',
+     cursive;"><a href="http://www.srustiarchitects.com">
+    Sahana's Blog</a></h1>
+  </header>
+  </div>
+<div class="content container">
+  <div class="row">
+    <div class="col-md-8">
+    {% block content %}
+    {% endblock %}
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
