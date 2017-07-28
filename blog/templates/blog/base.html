@@ -24,9 +24,11 @@
 <body style= "background-color: #EEE5E9">
   <div class = "page-header">
     <header>
+  {% if user.is_authenticated %}
   <h1 style ="font-size: 270%; font-family: 'Limelight',
-     cursive;"><a href="http://www.srustiarchitects.com">
-    Sahana's Blog</a></h1>
+     cursive;"><a href="{% url 'post_new' %}" class="top-menu">
+       <span class="glyphicon glyphicon-plus">Sahana's Blog</span></a></h1>
+  {% endif %}
   </header>
   </div>
 <div class="content container">
