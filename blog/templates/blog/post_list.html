@@ -5,10 +5,10 @@
             <h2 style = "color: #75BAC4; font-family: 'Concert One', cursive;">
             <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
           <div class="date">
-            <p style =  "font-family: 'Lato', sans-serif;">
+            <p style = "font-family: 'Concert One', cursive">
             <b>published: {{ post.published_date }}</b></p>
           </div>
-          <p style = "font-family: 'Lato', sans-serif;">
+          <p style = "font-family: 'Lato', san-serif">
           {{ post.text|linebreaksbr }}</p>
       </div>
     {% endfor %}
